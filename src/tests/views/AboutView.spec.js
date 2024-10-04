@@ -7,6 +7,8 @@ import App from '@/App.vue'
 import router from '@/router'
 
 describe("Renderiza AboutView después de navegar a la ruta 'About'", async () => {
+    let wrapper = mount(AboutView)
+
     const routerPrueba = createRouter({
         history: createWebHistory(),
         routes: [
@@ -22,12 +24,17 @@ describe("Renderiza AboutView después de navegar a la ruta 'About'", async () =
         routerPrueba.push({ name: 'about' })
         await routerPrueba.isReady()
 
-        const wrapper = mount(App, {
+        wrapper = mount(App, {
             global: {
                 plugins: [router]
             }
         })
 
         expect(wrapper.findComponent(AboutView).exists()).toBeTruthy
+    })
+
+    // snapshot
+    it("El html de AboutView se mantiene en las pruebas", () => {
+        expect(wrapper.html()).toMatchSnapshot()
     })
 })
