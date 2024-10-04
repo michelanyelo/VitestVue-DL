@@ -14,6 +14,6 @@ export default {
   name: 'HomeView',
   components: {
     PostsView
-}
+  }
 }
 </script>

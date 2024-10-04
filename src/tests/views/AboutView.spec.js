@@ -28,6 +28,6 @@ describe("Renderiza AboutView después de navegar a la ruta 'About'", async () =
             }
         })
 
-        expect(wrapper.findComponent(AboutView).exists).toBeTruthy
+        expect(wrapper.findComponent(AboutView).exists()).toBeTruthy
     })
 })

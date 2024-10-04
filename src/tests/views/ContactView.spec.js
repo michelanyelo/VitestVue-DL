@@ -29,6 +29,6 @@ describe("Renderiza ContactView después de navegar a la ruta 'Contact'", async 
             }
         })
 
-        expect(wrapper.findComponent(ContactView).exists).toBeTruthy
+        expect(wrapper.findComponent(ContactView).exists()).toBeTruthy
     })
 })

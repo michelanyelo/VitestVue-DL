@@ -1,0 +1,15 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`HomeViewComponent > El html de HomeView se mantiene en las pruebas 1`] = `
+"<div class="home"><img alt="Vue logo" src="/src/assets/logo.png">
+  <div class="posts">
+    <h1>Vista de Posts</h1>
+    <ul>
+      <li>Post 1</li>
+      <li>Post 2</li>
+      <li>Post 3</li>
+      <li>Post 4</li>
+    </ul>
+  </div>
+</div>"
+`;
